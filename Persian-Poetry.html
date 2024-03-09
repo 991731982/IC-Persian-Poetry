@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Sheridan Interactive Media - IC Build Exam 2023</title>
+
+<!-- zimjs.com - JavaScript Canvas Framework -->
+<script type=module>
+
+import zim, {makePattern} from "https://zimjs.org/cdn/01/zim_pizzazz";
+const assets = ["CoverVid.mp4","music.png","music2.png","pic2.jpg-1.png","FONTMAIN.otf","fengmian.png","photo2.png","photo3.png","FONT1.tff","FONT2.tff","FONT3.tff","FONT4.tff","backing.mp3","15397.wav","15092.mp3","14946.mp3","1.png","2.png","bg.mp4","video2.mp4","page1-bg.png","people2.png"];
+
+// See Docs under Frame for FIT, FILL, FULL, and TAG
+const frame=new Frame(FIT, 1980, 980, light, dark, ready,assets,"assets/");
+function ready() {
+    
+    const stage = frame.stage;
+            const stageW = frame.width;
+            const stageH = frame.height;
+            
+  
+
+    const Pics=series("pic2.jpg-1.png","people2.png","pic2.jpg").mix();
+    const Pictures=new Container().center();
+
+
+
+
+const container1=new Container().center(); 
+
+
+
+    part1();
+    function part1() {
+        
+new Pic("assets/page1-bg.png").center();
+
+
+const music3=new Pic("music2.png").center().rot(10).pos(-45,-200,container1).alp(.23).sca(1.3)
+.animate({
+      props:{alpha:0, scale:0,rotation:10},
+      ease:"ballisticIn",
+    //   rewind:"true",
+      time:.7,
+      from:true
+   });
+   music3.wiggle("x",music3.x,50,20,1,3);
+music3.wiggle("y",music3.y,0,30,1,3);
+
+
+
+const bgImg=new Blob({
+   color:"#f4f3ee",
+   controlType:"none", // free will be default control type (rather than "straight")
+   showControls:false,
+   lockControls:true,
+   allowToggle:false,
+   points:[
+      [0,0],
+      [0,780],
+      [1300,780],
+      [1300,80],
+      [1200,0]
+      
+   ]
+}).pos(600,130,container1).sha("rgba(0,0,0,.1)", -14, 18, 7)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:1150},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      
+  
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+;
+
+
+
+const corner=new Blob({
+   color:"#a5cfca",
+   controlType:"none", // free will be default control type (rather than "straight")
+   showControls:false,
+   lockControls:true,
+   allowToggle:false,
+   points:[
+      
+      [1300,80],
+      [1200,80],
+      [1200,0]
+      
+      
+   ]
+}).pos(1800,129,bgImg).sha("rgba(0,0,0,.2)", -1, 1, 10)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:1150},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+;
+
+
+new Label({
+   text:"بوی جوی مولیان آید همی",
+    // labelWidth:100,
+   size:160,
+   font:"FONT1",
+   color:"#7dd3cd",
+   align:CENTER
+//    bold:true,
+//    italic:true
+}).pos(-90,180,container1).mov(-370,130).rot(90)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:-400},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   })
+;
+
+new Label({
+   text:"به شبگیر چون بردمید آفتاب  سر جنگ جویان برآمد ز خواب چو شیران به کشتی دراویختند ز تنها خوی و خون همی ریختند   چنین گفت رستم به اسفندیا چو ضحاک شد بر جهان شهریارر او سالیان انجمن شد هزارن گشت کردار فرزانگانه شد کاید بروسالیان اند؟نبندد مرا دست چرخ بلن",
+   labelWidth:700,
+   size:30,
+   font:"FONTMAIN",
+   color:"#7dd3cd",
+   align:CENTER
+//    bold:true,
+//    italic:true
+}).pos(-90,180,container1).rot(90).mov(110,250)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:-400},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+;
+
+new Label({
+   text:"به شبگیر چون بردمید آفتاب  سر جنگ جویان برآمد ز خواب چو شیران به کشتی د  چنین گف بلن",
+   labelWidth:700,
+   size:30,
+   font:"FONTMAIN",
+   color:"#7dd3cd",
+   align:CENTER
+//    bold:true,
+//    italic:true
+}).pos(-90,180,container1).rot(90).mov(200,300)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:-400},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+;
+
+
+const titleWord=new Pic("titleWord.png").centerReg(bgImg).sca(.53).pos(90,200,LEFT,TOP,bgImg)
+.animate({
+      props:{scale:0},
+      time:1,
+      loop:false,
+      rewind:false,
+      from:true,
+      ease:"slowmoIn",
+    //   ease:"backInOut",
+   });
+titleWord.sha("rgba(0,0,0,0)",null,null,null);
+
+
+const music=new Pic("music.png").center().pos(700,129,bgImg).sca(.14)
+.animate({
+      props:{alpha:0, scale:0},
+      ease:"ballisticIn",
+    //   rewind:"true",
+      time:.7,
+      from:true
+   });
+music.wiggle("x",music.x,50,20,2,4);
+music.wiggle("y",music.y,50,20,2,4);
+
+
+const music2=new Pic("music.png").center().pos(1300,409,bgImg).sca(.14)
+.animate({
+      props:{alpha:0, scale:0},
+      ease:"ballisticIn",
+    //   rewind:"true",
+      time:.7,
+      from:true
+   }).mov(-170,340);
+music2.wiggle("x",music2.x,50,20,2,7);
+music2.wiggle("y",music2.y,50,20,2,7);
+
+
+
+
+const star1=new Poly(40, 9, .68, bgImg).pos(310,60,LEFT,TOP,bgImg)
+.animate({
+      props:{rotation:360},
+      loop:true,
+      rewind:false,
+      time:4.5,
+      wait:0,
+      loopWait:0,
+      rewindWait:0,
+      ease:"false"
+   });
+
+star1.sha("rgba(0,0,0,0)",null,null,null);
+
+
+const star2=new Poly(40, 9, .68, bgImg).pos(310,60,LEFT,BOTTOM,bgImg)
+.animate({
+      props:{rotation:-360},
+      loop:true,
+      rewind:false,
+      time:4.5,
+      wait:0,
+      loopWait:0,
+      rewindWait:0,
+      ease:"false"
+   }); // five point star
+star2.sha("rgba(0,0,0,0)",null,null,null);
+
+
+
+const windowForImgs=new Rectangle(465,660,black,null,null,[225,225,0,0]).pos(730,60,LEFT,TOP,bgImg);
+windowForImgs.sha("rgba(0,0,0,0)",null,null,null);
+
+
+
+
+
+
+
+///   new Pic("photo1.png").center(); // adds the preloaded assets/image.png
+const Cover=new Pic("pic2.jpg-1.png").centerReg(windowForImgs).sca(.5).setMask(windowForImgs).mov(null,20); // adds the preloaded assets/sky.png
+ 
+
+
+
+
+const wordPath=new Blob({
+    points:[
+    
+      [140,450],
+      [145,100],
+      [140,0],
+      [120,-100],
+      [80,-170],
+      [20,-230],
+      [-40,-255],
+      [-130,-270],
+      [-215,-255],
+      [-275,-230],
+      [-335,-170],
+      [-375,-100],
+      [-390,0],
+      [-395,100],
+      [-390,450],
+      
+   ]
+}).centerReg(windowForImgs).alp(0).sca(1.04);
+
+
+
+var percents = null;
+var lop = new LabelOnPath({
+   label:new Label({font:"FONT1",text:"JELLOELLO JIGGLEELLO JIGGLEELLO LO JIGGLEELLO JIGGLEELLO JIGGLE JIGGLES!", size:45}),
+   // label:new Label({text:"JELLO JIGGLES!", size:50}),
+   path:wordPath,
+   percentAngle:100,
+        percents:percents,
+        showPath:false,
+        allowToggle:true,
+        interactive:true,
+        onTop:false
+}).centerReg(windowForImgs).showPath();
+
+lop.animate({
+      props:{scale:0},
+      time:1.2,
+      loop:false,
+      rewind:false,
+      from:true,
+      ease:"slowmoIn"
+   });
+   zog(lop.text);
+   
+   lop.letters.animate({
+        wait:1000,
+        props:{scale:0},
+        time:100,
+        sequence:100,
+    });
+
+
+
+
+///
+
+
+
+
+
+const peoples=new Pic("assets/people2.png").center().mov(-340,247).sca(.65)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:1150},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+
+
+
+   const glare=new Pic("glare.png").center().pos(440,37,peoples).sca()
+.animate({
+      props:{alpha:0},
+      ease:"slowmoIn",
+    //   rewind:"true",
+    wait:1,
+      time:.9,
+      loop:true,
+      rewind:true,
+      rewindTime:.9,
+      from:true
+   }).alp(.8);
+
+   const glare2=new Pic("glare.png").center().pos(540,27,peoples).sca()
+.animate({
+      props:{alpha:0},
+      ease:"slowmoIn",
+    //   rewind:"true",
+    wait:1,
+      time:.9,
+      loop:true,
+      rewind:true,
+      rewindTime:.9,
+      from:true
+   }).alp(.8);
+
+
+
+
+
+
+
+const label = new Label({
+//    text:"CREATE YOUR POETRY",
+   text:"Play The Video",
+   font:"FONT4",
+   size:40,
+   bold:true,
+   color:white
+});
+const button1=new Button({
+   label:label,
+   width:430,
+   height:90,
+   backgroundColor:"#f59ba2",
+   rollBackgroundColor:"#b82c4c",
+   gradient:.3,
+   corner:0
+}).pos(1470,0,container1)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+    props:{y:-350},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+      call:() => {zog("done");}
+   });
+;
+
+button1.on("click", () => {
+
+    Cover.animate({
+      props:{alpha:0, y:300},
+      time:.9,
+      ease:"backOut",
+    //   from:true
+   });
+
+   const video = new Vid("CoverVid.mp4")
+   .centerReg(windowForImgs).setMask(windowForImgs).sca(.68).mov(0,2);// using 800x600
+
+
+   video.on("ready", ()=>{
+      video.play()
+});
+
+
+
+    S.update();
+
+   
+
+                
+               
+// move the emitter to the top of the pumpkin
+    const emitter = new Emitter({
+
+    obj:new Poly({min:5, max:30}, [5,6,7], .4, [red, green, blue, orange, pink, yellow]),
+    animation:{
+			props:{rotation:[-360,360]},
+			time:{min:.2, max:5},
+			ease:"linear",
+			loop:true,
+            gravity:-3,
+            speed: [2, 6],               
+		},
+        //num:40,
+        life:1,
+        decayTime:.3,
+        
+    // startPaused:true
+}).centerReg(button1)
+.spurt(10);
+
+
+
+});
+
+const label2 = new Label({
+   text:"Create Your Poetry",
+   font:"FONTMAIN",
+   size:40,
+   //bold:true,
+   color:white
+});
+
+
+const button2=new Button({
+   label:label2,
+   width:430,
+   height:90,
+   backgroundColor:"#79d0c4",
+   rollBackgroundColor:"#b82c4c",
+   gradient:.3,
+   corner:0
+}).pos(1000,0,container1)
+.animate({ // circle will be the default object for the inner animations
+    from:true,
+            props:{y:-350},
+      time:1, // will be the default time for the inner animations
+      ease:"backOut", // will be the default ease for the inner animations
+      id:"square", // will override any id set in the inner animations
+      loop:false,
+      // note - no rewind or from parameters
+   });
+   button2.on("click", () => {
+            part2();});
+
+}
+let poetries;
+    function part2() {
+
+        //1.background 
+        let background = new Pic("assets2/1.background.png")
+            .centerReg().sca(1.1);
+
+
+            const music3=new Pic("music2.png").center().rot(10).pos(-45,-200,container1).alp(.23).sca(1.3)
+.animate({
+      props:{alpha:0, scale:0,rotation:10},
+      ease:"ballisticIn",
+    //   rewind:"true",
+      time:.7,
+      from:true
+   });
+   music3.wiggle("x",music3.x,50,20,1,3);
+music3.wiggle("y",music3.y,0,30,1,3);
+
+
+
+        //2.table
+        let table = new Pic("assets2/2.table.png")
+            .centerReg();
+
+        //3.lace
+        let lace = new Pic("assets2/3.lace.png")
+            .centerReg();
+
+       
+            
+        //5.title
+        let title = new Pic("assets2/5.title.png")
+            .centerReg().mov(0,-425);
+
+        //6.circle
+        let circleLeft = new Pic("assets2/6.circle-left.png")
+        .centerReg().pos(-200,500).animate({
+      props:{rotation:360},
+      time:5,
+      loop:true,
+      from:true
+   });
+         let circleRight = new Pic("assets2/6.circle-right.png")
+         .centerReg().pos(1760,500).animate({
+      props:{rotation:360},
+      time:5,
+      loop:true,
+      from:true
+   });
+
+   
+
+        //7.centerImg
+        let centerImg = new Pic("assets2/7.centerImg.png")
+        .centerReg()
+        .pos(670,1000)
+            .animate({
+              props: { y: 500 },
+              time: .4,
+              wait: .1,
+            })
+
+
+     
+        poetries = new Container(W,H)
+            .centerReg()
+            .drag()
+            .sca(0)
+            .animate({
+                props:{scale:1}, 
+                time:.7, 
+                ease:zimEase([0,0.122,0.797,1]),
+                call:part3
+            });
+
+   
+
+
+        new Pic("assets2/4.poetry-1.png").pos(240,140,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-2.png").pos(190,230,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-3.png").pos(240,340,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-4.png").pos(220,550,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-5.png").pos(260,680,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-6.png").pos(200,780,LEFT,TOP,poetries);
+        
+        new Pic("assets2/4.poetry-7.png").pos(1400,140,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-8.png").pos(1320,250,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-9.png").pos(1400,340,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-10.png").pos(1380,560,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-11.png").pos(1320,660,LEFT,TOP,poetries);
+        new Pic("assets2/4.poetry-12.png").pos(1380,770,LEFT,TOP,poetries);
+
+        
+
+        poetries.loop(sentences=>{
+            sentences.startX = sentences.x;
+            sentences.startY = sentences.y;
+
+        });   
+        const music=new Pic("music-glow.png").pos(700,129).sca(.2)
+.animate({
+      props:{alpha:0, scale:0},
+      ease:"ballisticIn",
+      time:.7,
+      from:true
+   });
+music.wiggle("x",music.x+700,10,100,2,4);
+
+
+
+
+const music2=new Pic("music-glow.png").pos(1300,769).sca(.2)
+.animate({
+      props:{alpha:0, scale:0},
+      ease:"ballisticIn",
+    //   rewind:"true",
+      time:.7,
+      from:true
+   });
+music2.wiggle("x",music2.x+1200,10,100,1,3);
+
+
+const star1=new Poly(40, 9, .68,"#cf7a6b").pos(35,300,LEFT,TOP)
+.animate({
+      props:{rotation:360},
+      loop:true,
+      rewind:false,
+      time:4.5,
+      wait:0,
+      loopWait:0,
+      rewindWait:0,
+      ease:"false"
+   }).sca(.8);
+
+   const star2=new Poly(40, 9, .68,"#cf7a6b").pos(35,300,RIGHT,TOP)
+.animate({
+      props:{rotation:360},
+      loop:true,
+      rewind:false,
+      time:4.5,
+      wait:0,
+      loopWait:0,
+      rewindWait:0,
+      ease:"false"
+   }).sca(.8);
+
+
+
+        
+        
+    } 
+
+    
+    let card;
+    let front;
+    let back;
+    function part3() { // make the Flipper...
+        
+      
+        front = new Tile(new Rectangle(300,80,white,dark,.3,40).reg(CENTER), 1, 4, 250, 60,null,null,140).alp(.5);
+        
+        // 7. Create a back that is a Container with a Rectangle 350x350 with rounded corners
+        // and a Poly() with radius 150, 5 sided star - center it and move it down 8 pixels 
+        // then center a Label() that says "PASS".
+        // Note that back is declared above.
+        back = new Container();
+           
+            new Pic("assets2/back.png").addTo(back).mov(-100,-100).sca(1.05)
+    
+            
+        // 9. Make a Flipper() of the front and back centerReg 
+        // Store the flipper in the variable called card (already declared above)
+        // We want the flipper to not recieve any mouse events to start.
+        // Make the flipper be under the circles and animate in as shown with a backOut ease.
+        // The animation should wait .3 seconds and call part4 when done.
+        card = new Flipper(front,back)
+            .noMouse()
+            .centerReg()
+            .ord(-1)
+            .sca(0)
+            .animate({
+                props:{rotation:360, scale:1},
+                wait:.3,
+                time:1,
+                ease:"linear",
+                call:part4
+            }).top();      
+              
+    }
+    
+    
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // Part 4 - Interaction - 6 Marks
+    
+    function part4() {
+
+
+        
+        // 10. When we mousedown on the circles set the shadow as shown.        
+        poetries.on("mousedown", e => {
+            e.target.sha(black.toAlpha(.5),5,5,0);     
+            S.update();       
+            const sound = new Audio("assets/backing.mp3");
+                    sound.play();
+
+
+        });
+        
+        // 11. When we pressup on the circle do all the following:        
+        poetries.on("pressup", e => {
+            
+            // HINT: Remember your e.target... would suggest storing this as const circle.            
+            const sentences = e.target;
+            
+            // A. remove the shadow from the selected circle.
+            // From now on, we refer to the selected circle just as circle.
+            sentences.sha(-1); 
+            
+            // B. make the circle have no mouse events
+            sentences.noMouse();
+            
+            // C. ZIM loop() through the front and each time get the rect 
+            // Assign the loop() to a variable called answer
+            const answer = front.loop(rect=>{
+                
+                // D. In the loop test to see if the circle is hitting the registration of the rect 
+                // and the rect is not full (see Part F. below)                
+                if (sentences.hitTestReg(rect) && !rect.full) {
+                    
+                    // E. If this is the case then locate the circle at the rect and INSIDE the rect 
+                    // (so the circle will no longer be in circles but rather in the rect)                    
+                    sentences.loc(rect,null,rect).mov(-200,-50).alp(2);
+                    
+                    // F. And set a full property of the rect to true.
+                    // This is a made up property - so you will not find it in the docs.
+                    rect.full = true;
+                    
+                    // G. Update the stage and return "placed"; 
+                    // This will exit the loop and put the word "placed" into answer (of Part C. above).
+                    S.update();
+                    return "placed";
+                }                
+            });
+            
+            // H. Outside the loop but still inside the pressup event 
+            // if the answer is not "placed" (remember your !=)
+            // then animate the circle back to its startX and startY 
+            // and when done the animation 
+            // set the mouse events back on circle (important!)
+            if (answer!="placed") {                
+                sentences.animate({
+                    props:{x:sentences.startX, y:sentences.startY},
+                    time:.2,
+                    call:()=>{sentences.mouse();}
+                });
+            }      
+            
+            // I. If the numChildren of the circles container is 0 
+            // we are done so do the following steps: 
+
+            new Pic("assets2/12.Ok.png").loc(910,905).tap(()=>{
+   zog("clicking");
+   // J. Add a timeout of 1 second to call an arrow function
+   timeout(2.5, () => {
+                    
+                    // K. In the arrow function, flip() the card
+                    card.flip();  
+                    
+                    // L. Call another timeout of 1 second and an arrow function 
+                    timeout(.5, () => {
+                        
+                        // M. In the arrow function, 
+                        // set the mouse events back on card so we can use the flipper.
+                        card.mouse();
+                        
+                        // N. Also in the arrow function, make an Emitter() 
+                        // that emits the same Poly (as the star) but clear in color 
+                        // and a borderColor of red, green, purple, or blue with borderWidth 3
+                        // set gravity to false (or 0) and a force of 8 
+                        // start the emitter paused
+                        // then center the emitter on the stage and spurt() 30 times!
+
+                        new Emitter({
+                            obj:new Poly([30,80,150], 5, .6,clear,[red,yellow,blue,orange],3),
+                            gravity:false,
+                            force:8,
+                            startPaused:true,
+                           
+                        }).center().spurt(30);
+
+             
+
+                        const sound = new Audio("assets/backing.mp3");
+                    sound.play();
+                        
+                        // O. Your final bracket check would look like this:
+                        // end the inner timeout
+                        // end the outer timeout 
+                        // end the numChildren conditional 
+                        // end the pressup event    
+                        
+                        
+                        
+                    });
+                });   
+
+
+});
+
+
+               
+        });         
+        
+    } // end part4  
+
+    }
+    
+        
+// end ready
+
+</script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body></body>
+</html>
